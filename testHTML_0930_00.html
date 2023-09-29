@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<p><br>I think I am tired</p>
+    <form action="http://www.bilibili.com"><!-- 这里的action是提交后跳转到哔哩哔哩-->
+        <!-- 这里的submit(必须在form内)会生成一个能提交的按钮，但是一般的按钮不能提交-->
+        <input type="submit" value="哔哩哔哩" />
+        <input type="button" value="这个按钮不能提交" />
+    </form>
+    <form action="http://192.168.145.2:8080/crm/login" >
+        <!--表单提交的时候，表单项的name属性非常重要，有name的才会提交。没有name是不会提交的。
+        并且，浏览器向服务器提交的数据格式是：
+        url？name=value&name=value&name=value&name=value&name=value-->
+        <br>用户名: <input type="text" name = "user_name" /><!--这个地方可以加上value，就是默认输入框的输入值 -->
+        <br>密码:<input type="password" name = "password" />
+        <input type="submit" value="登录" />
+    </form>
+</body>
+</html>
