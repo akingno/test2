@@ -10,7 +10,32 @@
     <h1>Hello 你的母亲</h1>
     <p>This is a test page.</p>
     <br>
-    你麻麻被人袈裟了
-
+    1你麻麻被人袈裟了(此处测试一下下&lt; br &gt;):这是个只要单边就能写的
+    2这里换行写了，应该是不会换行的
+    <br>3&nbsp;&nbsp;&nbsp;&nbsp;这前面是四个空格
+    <p>4小于号和大于号(此处使用了p/p，所以是段落而不是一行行，上下会出现空格)</p>
+    <br>b&lt;a &gt;c
+    <p>
+        <br>表格table用thead，tbody和tfoot分成三部分，为后期js提供方便
+    </p>
+    <table border="1" width="50%">
+        <thead>
+            <tr>
+                <th>姓名</th><!--th是表头的 -->
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>张三</td><!--td 是数据单元格 -->
+                <td>18</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">总计</td><!--colspan是跨越两格的意思 -->
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
