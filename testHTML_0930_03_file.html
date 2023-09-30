@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file控件和disabled</title>
+</head>
+<body>
+       <form action="http://127.0.0.1:8000/crm/save" method="post" >
+        <input type="file" name="file">
+        <br>
+        <input type="submit" value="文件上传">
+
+        <br><!--readonly 和 disabled 都是只读的-->
+           <!--readonly修饰的表单项目可以提交给服务器，但是disabled修饰的不会提交-->
+        机构代码<input type="text" name="orgcode" value="1111" readonly />
+        <br>
+        用户代码<input type="text" name="usercode" value="1111" disabled />
+        <br>
+        <input type="submit" value="提交" />
+    </form>
+       <!-- maxlength：控制最大输入字符数量-->
+    这里只能输6个字符<input type="text" maxlength="6" />
+
+</body>
+</html>
