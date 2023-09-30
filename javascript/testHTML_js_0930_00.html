@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>链接JavaScript</title>
+</head>
+<body>
+    <!--行间事件方式-->
+    <!--1、需求:用户点击以下这个按钮，弹出一个对话框，对话框上显示: hello world-->
+    <!--2、JavaScript是一种事件驱动型的编程语言，通常都是在发生某个事件的时候，去执行某段代码。
+    例如:鼠标单击事件click，其它事件，例如:mouseover:鼠标经过事件等。
+    在JavaScript当中任何一个事件都有对应的事件句柄。
+    例如: click对应的事件句柄是onclick，mouseover对应的事件句柄是onmouseover。-->
+    <!--3、所有的事件句柄都是以标签的属性形式存在。例如以下input button就有一个onclick这样属性。
+    只要有用户点击了以下的这个按钮对象，此时按钮对象上发生了鼠标单击事件，那么注册在onclick事件句柄上的JS代码就会被执行，onclick后面的代码实际由浏览器执行-->
+  <!--<input type="button" value="hello" onclick="在浏览器打开时注册给onclick句柄" /> -->
+    <input type="button" value="hello" onclick="window.alert('hello world');" />
+<!--js的语句可以以;结尾，也可以不以;结尾-->
+</body>
+</html>
