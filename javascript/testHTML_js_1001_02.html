@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的类</title>
+</head>
+<body>
+    <script>
+        /*
+            类的定义：有两种，看上去很像函数
+                1.function 类名() {
+                    this.属性名 = 参数;
+                    this.属性名 = 参数;
+
+                    this.方法名 = function() {}
+                    }
+
+                2.类名 = function() {
+                    this.属性名 = 参数;
+                    this.属性名 = 参数;
+
+                    this.方法名 = function() {}
+                    }
+
+                    和普通的函数定义方法一样，但调用时如果没有使用new运算符调用，表示普通函数调用，不会在堆中new对象
+                    使用new运算符调用，就是把其看做一个类，这会导致浏览器的堆当中开辟一个新的区域
+        */
+        Emp = function(x, y,z) {
+            this.empno = x;
+            this.ename = y;
+            this.sal = z;
+
+            this.work = function() {
+                console.log(this.ename + " is working!" );
+                }
+            }
+
+        var e4 = new Emp(0001, "Smith", 800);
+        console.log( "e4.empno = " + e4.empno);
+        console.log( "e4.ename = " + e4.ename);
+        console.log( "e4.sal = " + e4.sal);
+        e4.work();
+    </script>
+</body>
+</html>
