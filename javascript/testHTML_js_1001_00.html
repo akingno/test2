@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的函数</title>
+</head>
+<body>
+    <script>
+    add(2,2);//此处可以调用后面的这个add，因为在执行script前，add已经声明并进入内存
+    function add(a,b){
+        alert(a+b);
+    }
+    </script>
+    <!--全局变量和局部变量：
+        和其他语言类似，但是
+        如果一个变量声明的时候没有使用var关键字的话，这个变量不管是在哪声明的，都是全局变量-->
+    <input type="button" value="hello" onclick="add(1,2);" /><!--此处button调用js函数-->
+</body>
+</html>
