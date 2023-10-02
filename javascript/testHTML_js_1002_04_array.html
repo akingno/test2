@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var arr = [1,2,3,4,5];
+
+    console.log(arr[arr.length - 1]);
+
+    //arr[100]不会无效，会导致arr自动扩容，中间的元素为默认，也就是undefined
+    arr[100] = 1234;
+
+    console.log(arr[100]);//1234
+    console.log(arr[99]);//undefined
+
+    var arr2 = [];
+    arr2.push(1);
+    arr2.push(2);
+    arr2.push(3);
+    console.log(arr2.pop());
+    console.log(arr2.pop());
+    console.log(arr2.pop());//FILO
+
+    //reverse()方法能导致数组反转
+    //join("$")方法能把数组中每个元素用括号中的符号连接起来
+  </script>
+
+</body>
+</html>

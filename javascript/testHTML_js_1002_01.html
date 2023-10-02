@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代码的执行顺序</title>
+</head>
+    <body onload ="pageLoad()">
+    <!--此处加一个onload可以使得页面加载完毕（script后那个input的button也加载完）才会执行pageload()-->
+          <script type="text/javascript">
+            function pageLoad() {
+              var btnElt = document.getElementById("btn");
+              btnElt.onclick = function() {
+              console.log("按钮被点击了，匿名函数被执行！")}
+            }
+            //也可以使用如下代码而不是在body处加onload，将回调函数注册到load事件上
+            //当页面全部加载完毕后，会发生load事件，load事件发生之后，监听器负责调用回调函数
+            //window.onload = pageLoad
+          </script>
+      <input type="button" value="hello" id="btn" />
+
+    </body>
+</html>
