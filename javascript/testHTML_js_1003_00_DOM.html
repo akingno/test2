@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作div和span</title>
+  <style type="text/css">
+      #div1 {
+      background-color: aqua;
+      border: 1px solid blue;
+      width: 100px;
+      height: 60px;
+      }
+      </style>
+
+</head>
+<body>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById("btn").onclick = function() {
+
+          var divElt = document.getElementById("div1");
+          //innerHTML是一个属性，不是方法，会将后面的字符串当做一段HTML代码解释并执行
+          divElt.innerHTML ="<font color='black'>用户名不能为空！</font>";
+          //innerText不会把后面的字符串当做html代码，只会当做普通的文本放进去
+          //divElt.innerText ="<font color='black'>用户名不能为空！</font>";
+            }
+          }
+  </script>
+
+  <input type="button" id="btn" value="设置div中的内容"/>
+
+  <div id="div1"></div><!-- innerHTML的执行结果放到了这里-->
+
+  <!-- span的大小会根据span的大小变化而变化-->
+  <span id="span1"></span><!--对span的变化也差不多逻辑-->
+
+</body>
+</html>
