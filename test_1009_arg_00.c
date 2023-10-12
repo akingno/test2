@@ -1,5 +1,7 @@
 #include <pthread.h>
 #include <stdio.h>
+
+
 /* Parameters to print_function. */
 struct char_print_parms {
  /* The character to print. */
@@ -7,6 +9,8 @@ struct char_print_parms {
  /* The number of times to print it. */
  int count;
 };
+
+
 /* Prints a number of characters to stderr, as given by PARAMETERS, which is a
  pointer to a struct char_print_parms. */
 void* char_print (void* parameters) {
@@ -17,6 +21,8 @@ void* char_print (void* parameters) {
  fputc (p->character, stderr);
  return NULL;
 }
+
+
 /* The main program. */
 int main()
 {

@@ -7,6 +7,7 @@ struct char_print_parms {
  /* The number of times to print it. */
  int count;
 };
+
 /* Prints a number of characters to stderr, as given by PARAMETERS, which is a
  pointer to a struct char_print_parms. */
 void* char_print (void* parameters) {
@@ -19,6 +20,7 @@ void* char_print (void* parameters) {
  int re_value = 100;
  return (void *) re_value;
 }
+
 /* The main program. */
 int main()
 {
