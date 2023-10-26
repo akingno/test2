@@ -1,0 +1,44 @@
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.left-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#avatar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+#upload-button {
+  height: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+}

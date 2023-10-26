@@ -7,7 +7,8 @@
 int main() {
   pid_t pid;
   int NUMBER_OF_PROCESSES = 3;
-  for(int i = 1;i< NUMBER_OF_PROCESSES;i++){
+  int i = 1;
+  for(i = 1;i< NUMBER_OF_PROCESSES;i++){
 		pid = fork();
 		if(pid < 0) {
 			printf("Could not create process\n");
