@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片轮播</title>
+    <style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 500px; /* 根据需要调整高度 */
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1; /* 初始z-index */
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+    z-index: 2; /* 确保活动图片在最顶层 */
+  }
+</style>
+</head>
+<body>
+
+<div id="carousel" class="carousel">
+    <div class="carousel-item active" style="background-image: url('img1.png');"></div>
+    <div class="carousel-item" style="background-image: url('img2.png');"></div>
+    <div class="carousel-item" style="background-image: url('img3.png');"></div>
+    <div class="carousel-item" style="background-image: url('img4.png');"></div>
+</div>
+
+<script>
+  let currentIndex = 0; // 当前图片的索引
+  const slides = document.querySelectorAll(".carousel-item");
+  const totalSlides = slides.length;
+
+  function setNextSlide() {
+    // 移除当前图片的active类
+    slides[currentIndex].classList.remove('active');
+
+    // 更新当前图片的索引
+    currentIndex = (currentIndex + 1) % totalSlides;
+
+    // 添加active类到新的当前图片
+    slides[currentIndex].classList.add('active');
+  }
+
+  // 每3秒切换到下一个轮播图片
+  setInterval(setNextSlide, 3000);
+</script>
+
+</body>
+</html>
